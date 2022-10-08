@@ -372,5 +372,28 @@ body {
 }
 
 @media(max-width: 576px) {
-    .header__list
-}
+    .header__list {
+        flex-direction: column;
+    }
+    .header__item {
+        margin-bottom: 15px;
+    }
+    .header__btn {
+        width: 145px;
+    }
+    .timer__box {
+        width: 280px;
+        height: 280px;
+    }
+    .title_fz120 {
+        font-size: 85px;
+    }
+    .btn_round {
+        width: 80px;
+        height: 80px;
+    }
+    .btn_round:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    }
