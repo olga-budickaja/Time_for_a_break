@@ -8,6 +8,10 @@
     background: rgba(36, 36, 38, 1);
 }
 
+body {
+    position: relative;
+}
+
 .container {
     margin: 0 auto;
     width: 620px;
@@ -143,31 +147,54 @@
     margin-right: 60px;
 }
 
+.btn-top {
+    margin-top: -48px;
+}
+
+.btn-auto {
+    background: rgba(245, 172, 14, 0.2);
+}
+
+.timer__start-btn {
+    margin-top: 60px;
+    padding: 20px 40px;
+    background: rgba(245, 172, 14, 0.8);
+}
+
+.timer__start-btn:hover,
+.timer__start-btn:focus {
+    background: rgba(245, 172, 14, 0.5);
+}
 
 .container_setting {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 33vw;
     height: 40vw;
-    border: 1px solid grey;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 2vw;
-    background-color: white;
     padding: 1%;
-    font-family: 'Spectral SC', serif;
+}
+
+.container__title {
+    text-align: center;
 }
 
 .title {
     text-transform: uppercase;
-    text-align: start;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
     padding: 2%;
     color: grey;
-    margin: 2%;
+    margin: 2% auto;
 }
 
 .container__title {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #EBEBEB;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     width: 100%;
 }
 
@@ -194,7 +221,7 @@
 .long__break h3 {
     color: grey;
     margin: 3%;
-    font-size: 1.5vw;
+    font-size: 1.1vw;
 }
 
 .content__time {
@@ -204,39 +231,38 @@
 
 .content {
     height: 13vw;
-    border-bottom: 1px solid #EBEBEB;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .content h2 {
     margin: 5% 0 2% 0;
-    font-size: 2vw;
+    font-size: 1.4vw;
 }
 
 .content__time input {
     width: 84%;
-    font-size: 3vw;
-    background-color: #EBEBEB;
+    font-size: 2vw;
+    background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
 }
 
 .currency {
-    font-size: 3vw;
-    background-color: #EBEBEB;
-    width: 13vw;
+    font-size: 2vw;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .div_music {
     display: flex;
+    padding: 15px 0;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #EBEBEB;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-
-.div_music h2 {
-    font-size: 2vw;
-}
-
 
 .b {
     display: block;
@@ -244,8 +270,8 @@
 
 .toggle {
     position: relative;
-    width: 11vw;
-    height: 4vw;
+    width: 4vw;
+    height: 2vw;
     border-radius: 2vw;
     background-color: #ddd;
 
@@ -302,16 +328,14 @@
 
 .div_mode {
     display: flex;
+    padding: 15px 0;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    border-bottom: 1px solid #EBEBEB;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.div_mode h2 {
-    font-size: 2vw;
-}
 
 .div_hour {
     display: flex;
@@ -319,17 +343,16 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    border-bottom: 1px solid #EBEBEB;
-}
-
-.div_hour h2 {
-    font-size: 2vw;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .currency__hour {
-    font-size: 3vw;
-    background-color: #EBEBEB;
-    width: 13vw;
+    font-size: 2vw;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
