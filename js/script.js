@@ -6,11 +6,17 @@ let inputLong = document.querySelector(".input_long");
 let promodoTime;
 let shortTime;
 let longTime;
-let min = 0;
-let sec = 0;
+let min;
+let sec;
 let t;
-let minuts= document.querySelector(".minute-timer");
+let minuts = document.querySelector(".minute-timer");
 let second = document.querySelector(".second-timer");
+let time1 = new Date();
+let time2;
+let nextMinuts;
+let nextHours;
+let hourTime = document.querySelector(".minute-time");
+let minutTime = document.querySelector(".second-time")
 
 openSettings.addEventListener("click", openMenuSettings);
 function openMenuSettings() {
@@ -82,7 +88,13 @@ inputPromodo.addEventListener("keypress", startPromodo);
 function startPromodo(evt){
     if (evt.keyCode == 13) {
         promodoTime = inputPromodo.value;
-        console.log(`Время работы:` + promodoTime)
+        min = promodoTime;
+        console.log(`Время работы:` + promodoTime);
+        time2 = new Date(+time1 + `${promodoTime}` * 6e4);
+        nextMinuts = time2.getMinutes();
+        nextHours = time2.getHours();
+        hourTime.innerHTML = nextHours + `:`;
+        minutTime.innerHTML = print(nextMinuts);
         funcStart();
     }
 }
@@ -91,7 +103,13 @@ inputShort.addEventListener("keypress", startShort);
 function startShort(evt){
     if (evt.keyCode == 13) {
         shortTime = inputShort.value;
-        console.log(`Время короткого:` + shortTime)
+        min = shortTime;
+        time2 = new Date(+time1 + `${shortTime}` * 6e4);
+        console.log(`Время короткого:` + shortTime);
+        nextMinuts = time2.getMinutes();
+        nextHours = time2.getHours();
+        hourTime.innerHTML = nextHours + `:`;
+        minutTime.innerHTML = print(nextMinuts);
         funcStart();
     }
 }
@@ -100,7 +118,13 @@ inputLong.addEventListener("keypress", startLong);
 function startLong(evt){
     if (evt.keyCode == 13) {
         longTime = inputShort.value;
-        console.log(`Время короткого:` + longTime)
+        min = longTime;
+        time2 = new Date(+time1 + `${longTime}` * 6e4);
+        console.log(`Время короткого:` + longTime);
+        nextMinuts = time2.getMinutes();
+        nextHours = time2.getHours();
+        hourTime.innerHTML = nextHours + `:`;
+        minutTime.innerHTML = print(nextMinuts);
         funcStart();
     }
 }
@@ -108,8 +132,6 @@ function startLong(evt){
 function funcStart() {
     t = setInterval(startTime, 1000);
 }
-
-
 
 function startTime() {
     if (sec > 0) {
