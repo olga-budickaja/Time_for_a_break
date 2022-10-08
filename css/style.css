@@ -172,7 +172,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 33vw;
-    height: 40vw;
+    height: auto;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 2vw;
     padding: 1%;
@@ -362,4 +362,15 @@ body {
 
 .themeBody {
     background-color: #4bd863;
+}
+
+@media(max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+@media(max-width: 576px) {
+    .header__list
 }
