@@ -125,6 +125,9 @@
 }
 
 .timer__buttons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
     margin-top: 20px;
 }
 
@@ -140,9 +143,6 @@
     margin-right: 60px;
 }
 
-.timer__buttons:first-child, .timer__buttons:last-child {
-    margin-top: 140px;
-}
 
 .container_setting {
     width: 33vw;
