@@ -124,6 +124,26 @@
     color: rgba(255, 255, 255, 0.5);
 }
 
+.timer__buttons {
+    margin-top: 20px;
+}
+
+.btn_round {
+    width: 100px;
+    height: 100px;
+    line-height: 20px;
+    border-radius: 100%;
+    display: block;
+}
+
+.btn_round:not(:last-child) {
+    margin-right: 60px;
+}
+
+.timer__buttons:first-child, .timer__buttons:last-child {
+    margin-top: 140px;
+}
+
 .container_setting {
     width: 33vw;
     height: 40vw;
