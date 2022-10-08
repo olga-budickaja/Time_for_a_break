@@ -172,7 +172,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 33vw;
-    height: 40vw;
+    height: auto;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 2vw;
     padding: 1%;
@@ -363,3 +363,43 @@ body {
 .themeBody {
     background-color: #4bd863;
 }
+
+.btn-save {
+    display: block;
+    margin: 50px auto;
+    padding: 10px 40px;
+}
+
+@media(max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+@media(max-width: 576px) {
+    .header__list {
+        flex-direction: column;
+    }
+    .header__item {
+        margin-bottom: 15px;
+    }
+    .header__btn {
+        width: 145px;
+    }
+    .timer__box {
+        width: 280px;
+        height: 280px;
+    }
+    .title_fz120 {
+        font-size: 85px;
+    }
+    .btn_round {
+        width: 80px;
+        height: 80px;
+    }
+    .btn_round:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    }
