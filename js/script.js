@@ -6,11 +6,11 @@ let inputLong = document.querySelector(".input_long");
 let promodoTime;
 let shortTime;
 let longTime;
-let min = 2;
-let sec = 2;
+let min = 0;
+let sec = 0;
 let t;
-let second = document.querySelector(".minute-timer");
-let minuts = document.querySelector(".second-timer");
+let minuts= document.querySelector(".minute-timer");
+let second = document.querySelector(".second-timer");
 
 openSettings.addEventListener("click", openMenuSettings);
 function openMenuSettings() {
@@ -42,30 +42,40 @@ if (keyTopic == true) {
 
 let selectMusic = document.querySelector(".currency");
 let music;
-let audio;
+let audio1 = new Audio("musics/bell.mp3");
+let audio2 = new Audio("musics/bird.mp3");
+let audio3 = new Audio("musics/relax.mp3");
+let audio4 = new Audio("musics/digital.mp3");
+let audio5 = new Audio("musics/beer.mp3");
 
-musicFunction = function () {
+function musicFunction() {
     music = selectMusic.value;
-    localStorage.setItem("melody", JSON.stringify(music))
+    localStorage.setItem("melody", JSON.stringify(music));
 }
 
-music = JSON.parse(localStorage.getItem("melody"));
-if (music == "bell") {
+function playAlarm() {
+    music = JSON.parse(localStorage.getItem("melody"))
     console.log(music);
-    audio = new Audio("musics/bell.mp3");
-    audio.play();
-}
-if (music == "bird") {
-    console.log(music);
-}
-if (music == "relax") {
-    console.log(music);
-}
-if (music == "digital") {
-    console.log(music);
-}
-if (music == "beer") {
-    console.log(music);
+    if (music === "bell") {
+        console.log(music);
+        audio1.play();
+    }
+    if (music === "bird") {
+        console.log(music);
+        audio2.play();
+    }
+    if (music === "relax") {
+        console.log(music);
+        audio3.play();
+    }
+    if (music === "digital") {
+        console.log(music);
+        audio4.play();
+    }
+    if (music === "beer") {
+        console.log(music);
+        audio5.play();
+    }
 }
 
 inputPromodo.addEventListener("keypress", startPromodo);
@@ -96,7 +106,7 @@ function startLong(evt){
 }
 
 function funcStart() {
-    setInterval(startTime, 1000);
+    t = setInterval(startTime, 1000);
 }
 
 
@@ -106,20 +116,23 @@ function startTime() {
         sec--;
         second.innerHTML = print(sec);
     } else {
-        sec = 5;
+        sec = 59;
         min--;
         second.innerHTML = print(sec);
     }
     if (min >= 0) {
-        minuts.innerHTML = print(min);
+        minuts.innerHTML = print(min) + `:`;
     } else {
         min = 0;
-        minuts.innerHTML = print(min);
+        minuts.innerHTML = print(min) + `:`;
     }
-    if(sec==0 && min==0){
-        musicFunction();
+    if(sec===0 && min===0){
+        clearInterval(t);
         min = 0;
         sec = 0;
+        second.innerHTML = sec;
+        minuts.innerHTML = min;
+        playAlarm();
     }
 }
 
