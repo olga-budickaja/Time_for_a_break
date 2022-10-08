@@ -364,6 +364,12 @@ body {
     background-color: #4bd863;
 }
 
+.btn-save {
+    display: block;
+    margin: 50px auto;
+    padding: 10px 40px;
+}
+
 @media(max-width: 768px) {
     .container {
         width: 100%;
