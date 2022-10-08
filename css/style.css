@@ -8,6 +8,10 @@
     background: rgba(36, 36, 38, 1);
 }
 
+body {
+    position: relative;
+}
+
 .container {
     margin: 0 auto;
     width: 620px;
@@ -143,8 +147,30 @@
     margin-right: 60px;
 }
 
+.btn-top {
+    margin-top: -48px;
+}
+
+.btn-auto {
+    background: rgba(245, 172, 14, 0.2);
+}
+
+.timer__start-btn {
+    margin-top: 60px;
+    padding: 20px 40px;
+    background: rgba(245, 172, 14, 0.8);
+}
+
+.timer__start-btn:hover,
+.timer__start-btn:focus {
+    background: rgba(245, 172, 14, 0.5);
+}
 
 .container_setting {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 33vw;
     height: 40vw;
     border: 1px solid grey;
