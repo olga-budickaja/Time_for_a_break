@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
+    <header class="container">
+        <div class="header">
             <div class="header__wrapper">
                 <h1 class="title_fz20">Promodoro</h1>
                 <div class="header__menu">
@@ -43,24 +43,37 @@
     <section class="timer">
         <div class="container">
             <div class="timer__box">
-                <div class="timer__set title_fz120">
-                    <span class="timer__set-minute minute">25:</span>
-                    <span class="timer__set-second second">00</span>
-                </div> <!--На сколько времени поставили-->
-                <div class="timer__alarm">
-                    <div class="timer__alarm-time">
-                        <span class="timer__set-minute minute">09:</span>
-                        <span class="timer__set-second second">35</span>
-                    </div> <!--Во сколько сработает-->
+                <div class="timer__box-wrapper">
+                    <div class="timer__set title_fz120">
+                        <span class="timer__set-minute minute title_fz120">25:</span><span class="timer__set-second second title_fz120">00</span>
+                    </div> <!--На сколько времени поставили-->
+                    <div class="timer__alarm">
+                        <div class="timer__alarm-time">
+                            <div class="timer__alarm-icon">
+                                <svg fill="" xmlns="http://www.w3.org/2000/svg" width="512pt" height="512pt" viewBox="0 0 512 512">
+                                    <path transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" d="M2443 4455 c-71 -36 -117 -102 -125 -179 -3 -28 -7 -30 -68 -43 -384
+                                        -77 -671 -306 -821 -652 -89 -207 -117 -373 -129 -762 -13 -409 -32 -586 -86
+                                        -786 -71 -266 -182 -424 -450 -644 l-127 -104 962 -3 c528 -1 1393 -1 1922 0
+                                        l961 3 -130 108 c-253 209 -353 347 -431 589 -63 199 -88 403 -101 837 -9 316
+                                        -24 440 -75 616 -37 131 -131 314 -213 415 -152 190 -393 331 -652 383 l-65
+                                        13 -11 45 c-15 57 -36 98 -66 126 -71 66 -203 83 -295 38z"/>
+                                    <path transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" d="M2040 1061 c0 -5 9 -37 19 -70 49 -157 194 -292 362 -336 73 -20 222
+                                        -19 290 1 141 41 262 141 324 267 20 40 38 89 42 110 l6 37 -522 0 c-307 0
+                                        -521 -4 -521 -9z"/>
+                                </svg>
+                            </div>
+                            <span class="timer__set-minute minute">09:</span><span class="timer__set-second second">35</span>
+                        </div> <!--Во сколько сработает-->
+                    </div>
                 </div>
-                <div class="timer__buttons">
-                    <button class="btn btn_round timer__btn">Short Break</button>
-                    <button class="btn btn_round timer__btn">Auto</button> <!--Promodoro-->
-                    <button class="btn btn_round timer__btn">Long Break</button>
-                </div>
-                <div class="timer__start">
-                    <button class="btn timer__start-btn">Start</button>
-                </div>
+            </div>
+            <div class="timer__buttons">
+            <button class="btn btn_round timer__btn">Short Break</button>
+            <button class="btn btn_round timer__btn">Auto</button> <!--Promodoro-->
+            <button class="btn btn_round timer__btn">Long Break</button>
+        </div>
+            <div class="timer__start">
+                <button class="btn timer__start-btn">Start</button>
             </div>
         </div>
     </section>
