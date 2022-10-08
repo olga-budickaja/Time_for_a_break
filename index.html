@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
+    <header class="container">
+        <div class="header">
             <div class="header__wrapper">
                 <h1 class="title_fz20">Promodoro</h1>
                 <div class="header__menu">
@@ -19,7 +19,7 @@
                             <div class="header__item-icon">
                                 <svg fill="#000" height="91px" viewBox="0 0 91 91" width="91px" xmlns="http://www.w3.org/2000/svg"><path d="M90.668,35.091c0.17-0.643,0.08-1.326-0.25-1.902L78.813,13.115c-0.695-1.195-2.225-1.607-3.422-0.914   l-9.734,5.619c-1.791-1.283-3.707-2.391-5.727-3.307V3.269c0-1.383-1.121-2.504-2.506-2.504H34.23   c-1.385,0-2.504,1.121-2.504,2.504v11.246c-1.891,0.861-3.699,1.893-5.406,3.086l-9.678-5.736   c-0.572-0.338-1.252-0.434-1.896-0.271c-0.643,0.166-1.197,0.578-1.535,1.15L1.387,32.69c-0.338,0.57-0.436,1.254-0.271,1.898   c0.166,0.643,0.578,1.195,1.15,1.533l9.682,5.734c-0.154,1.305-0.229,2.523-0.229,3.695c0,1.039,0.061,2.117,0.189,3.309   L2.16,54.491c-0.576,0.334-0.996,0.881-1.166,1.521c-0.174,0.641-0.082,1.326,0.25,1.9l11.6,20.076   c0.691,1.197,2.225,1.609,3.422,0.914l9.736-5.621c1.793,1.285,3.711,2.391,5.725,3.307v11.244c0,1.385,1.119,2.504,2.504,2.504   h23.193c1.385,0,2.506-1.119,2.506-2.504V76.589c1.889-0.859,3.697-1.895,5.402-3.088l9.684,5.736   c1.188,0.705,2.727,0.311,3.432-0.879L90.27,58.413c0.336-0.572,0.434-1.256,0.271-1.898c-0.166-0.643-0.578-1.195-1.152-1.533   l-9.676-5.734c0.156-1.314,0.23-2.518,0.23-3.695c0-1.051-0.063-2.143-0.189-3.313l9.746-5.627   C90.074,36.282,90.496,35.733,90.668,35.091z M59.242,45.55c0,7.396-6.018,13.414-13.416,13.414   c-7.396,0-13.412-6.018-13.412-13.414c0-7.393,6.016-13.41,13.412-13.41C53.225,32.14,59.242,38.157,59.242,45.55z" /></svg>
                             </div>
-                            <button class="header__link open_settings btn btn-square">Settings</button>
+                            <button class="header__link open_settings header__btn btn btn-square">Settings ></button>
                         </li>
                         <li class="header__item">
                             <div class="header__item-icon">
@@ -31,7 +31,7 @@
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M24 26C27.3137 26 30 23.3137 30 20C30 16.6863 27.3137 14 24 14C20.6863 14 18 16.6863 18 20C18 23.3137 20.6863 26 24 26ZM24 28C28.4183 28 32 24.4183 32 20C32 15.5817 28.4183 12 24 12C19.5817 12 16 15.5817 16 20C16 24.4183 19.5817 28 24 28Z"/>
                                 </svg>
                             </div>
-                            <button  class="header__link open_settings btn btn-square">Login</button>
+                            <button  class="header__link open_login header__btn btn btn-square">Login ></button>
                         </li>
                     </ul>
                 </div>
@@ -43,18 +43,37 @@
     <section class="timer">
         <div class="container">
             <div class="timer__box">
-                <div class="timer__set title_fz120">25:00</div> <!--На сколько времени поставили-->
-                <div class="timer__alarm">
-                    <div class="timer__alarm-time">9:32</div> <!--Во сколько сработает-->
+                <div class="timer__box-wrapper">
+                    <div class="timer__set title_fz120">
+                        <span class="timer__set-minute minute-timer title_fz120">25:</span><span class="timer__set-second second-timer title_fz120">00</span>
+                    </div> <!--На сколько времени поставили-->
+                    <div class="timer__alarm">
+                        <div class="timer__alarm-time">
+                            <div class="timer__alarm-icon">
+                                <svg fill="" xmlns="http://www.w3.org/2000/svg" width="512pt" height="512pt" viewBox="0 0 512 512">
+                                    <path transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" d="M2443 4455 c-71 -36 -117 -102 -125 -179 -3 -28 -7 -30 -68 -43 -384
+                                        -77 -671 -306 -821 -652 -89 -207 -117 -373 -129 -762 -13 -409 -32 -586 -86
+                                        -786 -71 -266 -182 -424 -450 -644 l-127 -104 962 -3 c528 -1 1393 -1 1922 0
+                                        l961 3 -130 108 c-253 209 -353 347 -431 589 -63 199 -88 403 -101 837 -9 316
+                                        -24 440 -75 616 -37 131 -131 314 -213 415 -152 190 -393 331 -652 383 l-65
+                                        13 -11 45 c-15 57 -36 98 -66 126 -71 66 -203 83 -295 38z"/>
+                                    <path transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" d="M2040 1061 c0 -5 9 -37 19 -70 49 -157 194 -292 362 -336 73 -20 222
+                                        -19 290 1 141 41 262 141 324 267 20 40 38 89 42 110 l6 37 -522 0 c-307 0
+                                        -521 -4 -521 -9z"/>
+                                </svg>
+                            </div>
+                            <span class="timer__set-minute minute-time">09:</span><span class="timer__set-second second-time">35</span>
+                        </div> <!--Во сколько сработает-->
+                    </div>
                 </div>
-                <div class="timer__buttons">
-                    <button class="btn btn_round timer__btn">Short Break</button>
-                    <button class="btn btn_round timer__btn">Auto</button> <!--Promodoro-->
-                    <button class="btn btn_round timer__btn">Long Break</button>
-                </div>
-                <div class="timer__start">
-                    <button class="btn timer__start-btn">Start</button>
-                </div>
+            </div>
+            <div class="timer__buttons">
+                <button class="btn btn_round timer__btn btn-top">Short Break</button>
+                <button class="btn btn_round timer__btn">Auto</button> <!--Promodoro-->
+                <button class="btn btn_round timer__btn btn-top">Long Break</button>
+            </div>
+            <div class="timer__start">
+                <button class="btn timer__start-btn">Start</button>
             </div>
         </div>
     </section>
@@ -70,16 +89,16 @@
                 <div class="work">
                     <h3>Pomodoro</h3>
                     <label>
-                        <input type="number" name="">
+                        <input type="number" name="" class="input_promodo">
                     </label>
                 </div>
                 <div class="short__break">
                     <h3>Short Break</h3>
-                    <input type="number" name="">
+                    <input type="number" name="" class="input_short">
                 </div>
                 <div class="long__break">
                     <h3>Long Break</h3>
-                    <input type="number" name="">
+                    <input type="number" name="" class="input_long">
                 </div>
             </div>
         </div>
